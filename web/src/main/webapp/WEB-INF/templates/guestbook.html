@@ -1,39 +1,24 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <title>Guestbook</title>
+    <script src="/resources/js/guestbook.js" onload="getAllMessages()"></script>
+    <link rel="stylesheet" type="text/css" href="/resources/css/guestbook.css">
 </head>
 <body>
+<h1>GUESTBOOK</h1>
 
-<div class="container">
-    <table class="table table-sm table-light table-bordered">
-        <tr>
-            <th style="width: 20%">Name</th>
-            <th>Text</th>
-        </tr>
-        <tr th:each="message: ${messages}">
-            <td th:text="${message.name}">Name</td>
-            <td th:text="${message.text}">Text</td>
-        </tr>
-    </table>
-
-    <form class="form-horizontal" th:action="@{/guestbook}" th:method="post" th:object="${message}">
-        <label for="name">
-            <span>Name:</span>
-            <input type="text" class="form-control" id="name" th:field="*{name}">
-        </label>
-        <br>
-        <label for="text">
-            <span>Text:</span>
-            <textarea class="form-control" rows="5" id="text" th:field="*{text}"></textarea>
-        </label>
-        <br>
-        <input type="submit" class="btn btn-success" value="Submit">
-    </form>
+<div class="form">
+    <label for="name" class="label">Name:</label>
+    <input type="text" id="name" class="input-name">
+    <br>
+    <label for="text" class="label">Your message:</label>
+    <input type="text" id="text" class="input-text">
+    <br>
+    <input type="button" value="Send" class="button" onclick="saveMessage(), cleanInputs()">
 </div>
 
+<div id="messages" class="messages"></div>
 </body>
 </html>

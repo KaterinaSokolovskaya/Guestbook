@@ -1,0 +1,90 @@
+body {
+    background-size: cover;
+    background: radial-gradient(ellipse farthest-corner at 30px 20px, cornflowerblue, lightsteelblue) center;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+h1 {
+    margin-left: 10%;
+}
+
+h4 {
+    min-height: 20px;
+    border-bottom-style: inset;
+    border-bottom-color: darkgray;
+    line-height: 0%;
+    margin-left: 10px;
+    margin-right: 10px;
+    word-break: break-word;
+}
+
+p {
+    min-height: 30px;
+    line-height: 100%;
+    word-break: break-all;
+    margin-left: 10px;
+}
+
+div {
+    background-color: gainsboro;
+    border-style: solid;
+    border-width: thin;
+    box-shadow: 0 0 5px;
+    border-color: darkgray;
+    border-collapse: separate;
+    border-radius: 10px;
+    margin: 0% 0% 4% 0%;
+}
+
+.messages {
+    border-style: none;
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
+}
+
+.form {
+    border-style: solid;
+    border-width: thin;
+    box-shadow: 0 0 5px;
+    border-color: darkgray;
+    background-color: lightgray;
+}
+
+.input-name {
+    background-color: whitesmoke;
+    width: 90%;
+    margin: 1% 5%;
+    word-break: break-word;
+}
+
+.input-text {
+    background-color: whitesmoke;
+    width: 90%;
+    min-height: 50px;
+    margin: 1% 5%;
+    word-break: break-word;
+}
+
+.label {
+    margin: 1% 5%;
+    font-size: large;
+}
+
+.button {
+    background-color: cornflowerblue;
+    color: whitesmoke;
+    font-size: x-large;
+    margin-left: 50%;
+    margin-right: 50%;
+    margin-bottom: 1%;
+    box-shadow: 0 0 5px;
+    border: 1px solid dodgerblue;
+    border-radius: 10px;
+    transition-duration: 0.4s;
+}
+
+.button:hover {
+    background-color: gainsboro;
+    color: cornflowerblue;
+}
